@@ -1,3 +1,5 @@
+cmake_minimum_required(VERSION 3.0)
+
 project(FTR-DataEntry)
 
 add_executable(FTR-DataEntry main.cpp BigNumber.cpp CommandReader.cpp DataEntryEngine.cpp DataTable.cpp FibonacciMatcher.cpp)

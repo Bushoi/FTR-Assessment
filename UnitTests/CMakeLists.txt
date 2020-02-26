@@ -1,4 +1,13 @@
+cmake_minimum_required(VERSION 3.0)
+
 project(FTR-UnitTests)
+
+#
+# Change '~/include' and '~/lib' to suit your environment
+# They need to point to directories that provide googletest
+#
+include_directories( ~/include ../DataEntry )
+link_directories( ~/lib )
 
 add_executable(FTR-UnitTests main.cpp 
 	BigNumber_Fixture.cpp BigNumber_Tests.cpp 
@@ -9,13 +18,6 @@ add_executable(FTR-UnitTests main.cpp
 	../DataEntry/DataEntryEngine.cpp 
 	../DataEntry/DataTable.cpp 
 	../DataEntry/FibonacciMatcher.cpp)
-
-#
-# Change '~/include' and '~/lib' to suit your environment
-# They need to point to directories that provide googletest
-#
-include_directories( ~/include ../DataEntry )
-link_directories( ~/lib )
 
 #
 # pthread was required for GNU/Linux's implementation
