@@ -1,0 +1,7 @@
+project(FTR-DataEntry)
+
+add_executable(FTR-DataEntry main.cpp BigNumber.cpp CommandReader.cpp DataEntryEngine.cpp DataTable.cpp FibonacciMatcher.cpp)
+target_link_libraries(FTR-DataEntry pthread)
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
