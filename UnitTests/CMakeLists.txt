@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 2.8)
 
 project(FTR-UnitTests)
 
@@ -6,8 +6,8 @@ project(FTR-UnitTests)
 # Change '~/include' and '~/lib' to suit your environment
 # They need to point to directories that provide googletest
 #
-include_directories( ~/include ../DataEntry )
-link_directories( ~/lib )
+include_directories( ~/Development/svn_bpm/branches/fixedstructures/Linux/Source/googletest/googletest/include ../DataEntry )
+link_directories( ~/Development/svn_bpm/branches/fixedstructures/Linux/Source/build/release/deps/lib )
 
 add_executable(FTR-UnitTests main.cpp 
 	BigNumber_Fixture.cpp BigNumber_Tests.cpp 
@@ -18,6 +18,8 @@ add_executable(FTR-UnitTests main.cpp
 	../DataEntry/DataEntryEngine.cpp 
 	../DataEntry/DataTable.cpp 
 	../DataEntry/FibonacciMatcher.cpp)
+
+target_compile_options(FTR-UnitTests PUBLIC -std=c++11 )
 
 #
 # pthread was required for GNU/Linux's implementation
