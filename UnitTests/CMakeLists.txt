@@ -6,8 +6,8 @@ project(FTR-UnitTests)
 # Change '~/include' and '~/lib' to suit your environment
 # They need to point to directories that provide googletest
 #
-include_directories( ~/Development/svn_bpm/branches/fixedstructures/Linux/Source/googletest/googletest/include ../DataEntry )
-link_directories( ~/Development/svn_bpm/branches/fixedstructures/Linux/Source/build/release/deps/lib )
+include_directories( ~/include ../DataEntry )
+link_directories( ~/lib )
 
 add_executable(FTR-UnitTests main.cpp 
 	BigNumber_Fixture.cpp BigNumber_Tests.cpp 
